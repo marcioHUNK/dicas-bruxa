@@ -14,7 +14,7 @@ body {
 }
 
 .card {
-  max-width: 400px;
+  max-width: 500px;
   background-color: #f0e6cc;
   border-radius: 8px;
   overflow: hidden; /* esconde o texto até ele "abrir" */
@@ -27,7 +27,7 @@ body {
   display: flex;
   align-items: center;
   gap: 16px;
-  padding: 12px;
+  padding: 12px 0;
   background: none;
   border: none;
   cursor: pointer;
