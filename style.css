@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 40px;
+  font-family: sans-serif;
+  background-color: #e8dcc0;
+  display: grid;
+  place-items: center;
+  gap: 20px;
+
+}
+
+.card {
+  max-width: 400px;
+  background-color: #f0e6cc;
+  border-radius: 8px;
+  overflow: hidden; /* esconde o texto até ele "abrir" */
+
+}
+
+/* o botão que envolve foto + nome */
+.card-gatilho {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+}
+
+.card-foto {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card-nome {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* o texto começa "fechado" */
+.card-texto {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 16px;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+/* classe adicionada via JavaScript quando o card está aberto */
+.card-texto.aberto {
+  max-height: 300px; /* alto o suficiente pra caber o texto */
+  padding: 0 16px 16px;
+}
